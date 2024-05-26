@@ -1,0 +1,180 @@
+[gd_scene load_steps=5 format=3 uid="uid://7r3fdtqaee7p"]
+
+[ext_resource type="Script" path="res://app.gd" id="1_oh3a2"]
+[ext_resource type="PackedScene" uid="uid://dr77o0hb7mv76" path="res://parallax_background.tscn" id="2_dvtok"]
+[ext_resource type="Theme" uid="uid://dah48f5whkoca" path="res://Default.tres" id="2_ytp02"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fgojq"]
+font_size = 32
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_oh3a2")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_dvtok")]
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 704.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_right = 192.0
+offset_bottom = 112.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "How are you feeling?"
+label_settings = SubResource("LabelSettings_fgojq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 256.0
+offset_top = -7.0
+offset_right = 384.0
+offset_bottom = 33.0
+grow_vertical = 2
+item_count = 3
+popup/item_0/text = "Happy"
+popup/item_0/id = 0
+popup/item_1/text = "Sad"
+popup/item_1/id = 1
+popup/item_2/text = "Confused"
+popup/item_2/id = 2
+
+[node name="OptionButton2" type="OptionButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 576.0
+offset_top = -7.0
+offset_right = 704.0
+offset_bottom = 33.0
+grow_vertical = 2
+item_count = 3
+popup/item_0/text = "Calm"
+popup/item_0/id = 0
+popup/item_1/text = "Energetic"
+popup/item_1/id = 1
+popup/item_2/text = "Angry"
+popup/item_2/id = 2
+
+[node name="OptionButton4" type="OptionButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 576.0
+offset_top = -95.0
+offset_right = 704.0
+offset_bottom = -55.0
+grow_vertical = 2
+item_count = 3
+popup/item_0/text = "Arabic"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+popup/item_2/text = "Any"
+popup/item_2/id = 2
+
+[node name="OptionButton5" type="OptionButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 528.0
+offset_top = 97.0
+offset_right = 752.0
+offset_bottom = 137.0
+grow_vertical = 2
+item_count = 3
+popup/item_0/text = "Song"
+popup/item_0/id = 0
+popup/item_1/text = "Music/Instrumental"
+popup/item_1/id = 1
+popup/item_2/text = "Any"
+popup/item_2/id = 2
+
+[node name="OptionButton3" type="OptionButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 896.0
+offset_top = -7.0
+offset_right = 1024.0
+offset_bottom = 33.0
+grow_vertical = 2
+item_count = 3
+popup/item_0/text = "Awake"
+popup/item_0/id = 0
+popup/item_1/text = "Sleepy"
+popup/item_1/id = 1
+popup/item_2/text = "Vibe"
+popup/item_2/id = 2
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 536.0
+offset_right = 696.0
+offset_bottom = 570.0
+theme = ExtResource("2_ytp02")
+text = "Confirm"
+
+[node name="Button2" type="Button" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 584.0
+offset_top = 536.0
+offset_right = 696.0
+offset_bottom = 570.0
+theme = ExtResource("2_ytp02")
+text = "Skip"
+
+[node name="Popup" type="Popup" parent="."]
+theme = ExtResource("2_ytp02")
+
+[node name="Label" type="Label" parent="Popup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CloseButton" type="Button" parent="Popup"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -26.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = " x "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(640, 360)
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Popup/CloseButton" to="." method="_on_close_button_pressed"]

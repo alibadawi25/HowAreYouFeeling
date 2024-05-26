@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dr77o0hb7mv76"]
+
+[ext_resource type="Texture2D" uid="uid://dyjsydfct6v3s" path="res://craftpix-net-427565-free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 2/1.png" id="1_4nch7"]
+[ext_resource type="Script" path="res://parallax_background.gd" id="1_o0sv0"]
+[ext_resource type="Texture2D" uid="uid://fc7ro5qpmigr" path="res://craftpix-net-427565-free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 2/2.png" id="2_005ip"]
+[ext_resource type="Texture2D" uid="uid://c17gy355hhaf0" path="res://craftpix-net-427565-free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 2/3.png" id="3_b4owg"]
+[ext_resource type="Texture2D" uid="uid://botygfr18w1nn" path="res://craftpix-net-427565-free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 2/4.png" id="4_mgmny"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_o0sv0")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1290, 0)
+
+[node name="1" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(645, 359)
+scale = Vector2(2.23958, 2.22839)
+texture = ExtResource("1_4nch7")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(1290, 0)
+
+[node name="2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(645, 359)
+scale = Vector2(2.23958, 2.22839)
+texture = ExtResource("2_005ip")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1.8, 1.8)
+motion_mirroring = Vector2(1290, 0)
+
+[node name="3" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(645, 359)
+scale = Vector2(2.23958, 2.22839)
+texture = ExtResource("3_b4owg")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1290, 0)
+
+[node name="4" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(645, 359)
+scale = Vector2(2.23958, 2.22839)
+texture = ExtResource("4_mgmny")

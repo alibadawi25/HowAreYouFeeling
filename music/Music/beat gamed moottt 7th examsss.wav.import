@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1ohaacf6k7b6"
+path="res://.godot/imported/beat gamed moottt 7th examsss.wav-76948a7debe0d5456660be4bf91a87f8.sample"
+
+[deps]
+
+source_file="res://Music/beat gamed moottt 7th examsss.wav"
+dest_files=["res://.godot/imported/beat gamed moottt 7th examsss.wav-76948a7debe0d5456660be4bf91a87f8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

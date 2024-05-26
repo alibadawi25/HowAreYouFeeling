@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5hlr1goqs003"]
+
+[ext_resource type="Theme" uid="uid://dah48f5whkoca" path="res://Default.tres" id="1_jomrg"]
+[ext_resource type="Script" path="res://main.gd" id="1_k4e8q"]
+[ext_resource type="PackedScene" uid="uid://dr77o0hb7mv76" path="res://parallax_background.tscn" id="3_e5umj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fgojq"]
+font_size = 32
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_k4e8q")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 704.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_right = 192.0
+offset_bottom = 112.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "How are you feeling?"
+label_settings = SubResource("LabelSettings_fgojq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -24.0
+offset_right = 92.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jomrg")
+text = "Start"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_e5umj")]
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

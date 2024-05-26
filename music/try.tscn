@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7tytwqehogd7"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_ahbks"]
+[ext_resource type="Theme" uid="uid://dah48f5whkoca" path="res://Default.tres" id="2_mq4vj"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ahbks")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 432.0
+offset_bottom = 104.0
+placeholder_text = "HOW ARE YOU?"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 128.0
+offset_right = 296.0
+offset_bottom = 184.0
+theme = ExtResource("2_mq4vj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(208, 104)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

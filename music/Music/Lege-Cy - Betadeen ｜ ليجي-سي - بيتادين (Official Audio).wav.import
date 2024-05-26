@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hdrj7g3xbxpv"
+path="res://.godot/imported/Lege-Cy - Betadeen ｜ ليجي-سي - بيتادين (Official Audio).wav-f3e74f51e8220fa74c482b71ae1d2de5.sample"
+
+[deps]
+
+source_file="res://Music/Lege-Cy - Betadeen ｜ ليجي-سي - بيتادين (Official Audio).wav"
+dest_files=["res://.godot/imported/Lege-Cy - Betadeen ｜ ليجي-سي - بيتادين (Official Audio).wav-f3e74f51e8220fa74c482b71ae1d2de5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
